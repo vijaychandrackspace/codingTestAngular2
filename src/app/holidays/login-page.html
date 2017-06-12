@@ -1,0 +1,8 @@
+ <b>List of holidays in 2015</b>
+<div *ngIf="isDataAvailable" >
+	<ul *ngFor = "let holiday of getData.holidays">
+	    <li><a (click)="redirect(holiday.name)">{{holiday.name}}</a></li>
+  	 </ul>
+</div>
+              
+             

@@ -16,6 +16,6 @@ export class HolidayDetailComponent  {
   }
 
  goBack(){
-     this.router.navigate(['/']);
+     this.router.navigate(['/holidays']);
   }
 }

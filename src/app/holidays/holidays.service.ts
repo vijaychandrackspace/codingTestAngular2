@@ -10,9 +10,9 @@ export class holidayService {
     this.http=http;
   }
 
-  getHolidays(){
+  getHolidays(country:string, year:string, month:string){
        console.log('Service called');
-       return this.http.get('https://holidayapi.com/v1/holidays?key=5c252665-102a-4680-a065-31c51879f72e&country=US&year=2016&month=05')
+       return this.http.get('https://holidayapi.com/v1/holidays?key=5c252665-102a-4680-a065-31c51879f72e&country='+country+'&year='+year+'&month='+month)
               .map(function(res: any) { return JSON.stringify(res.json())});
   }
 } 
